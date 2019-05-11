@@ -1,0 +1,105 @@
+import java.util.Scanner;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
+import javax.imageio.ImageIO;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+public class mudArmy
+{
+    Scanner sc = new Scanner (System.in);
+    String disaster1 = " ";
+    String disaster2 = " ";
+    String disaster3 = " ";
+    String disaster4 = " ";
+    String disaster5 = " ";
+    String disaster6 = " ";
+    String disaster7 = " ";
+    String disaster8 = " ";
+    String disaster9 = " ";
+    String disaster10 = " ";
+    String disas_opt;
+        public static void main(String[] args)
+        {
+        mudArmy ma= new mudArmy(); 
+        ma.first();   
+        ma.currentIncidents();
+        ma.volunteers();
+        ma.register();
+        }
+      
+      public void first()
+      {
+        System.out.print('\u000C');;
+        System.out.println("\n");
+        JFrame frame = new JFrame();
+        ImageIcon icon = new ImageIcon("\\zfssa0\home_student\c3309266\Profile\Desktop.jpg");
+        JLabel label = new JLabel(icon); 
+        System.out.println("1\t YES");
+        System.out.println("2\t I want to help");
+        System.out.println("\t Enter your option ");
+        int opt = sc.nextInt();
+        
+      }
+      public void volunteers()
+    {
+        System.out.println("VOLUNTEERS REQUIRED");
+        System.out.println(" "+disas_opt);
+        System.out.println("ROLE     No. of volunteers needed");
+        System.out.println("SANDBAG FILLING        "+sandbag);
+        System.out.println("CATERING               "+catering);
+        System.out.println("ORGANISING VOLUNTEERS  "+volunteers);
+        System.out.println("GENERAL CLEAN UP       "+cleanup);
+        System.out.println("Select ROLE to find out more details; time required, contact details etc.");
+        String role = sc.next()+sc.nextInt();
+        System.out.println("REGISTER/LOGIN");
+        
+    }
+       
+      public String register(String s)
+      {
+          System.out.println("\n");
+          System.out.println("1.\t Enter name");
+          String name = sc.next()+ sc.nextLine();
+          System.out.println("2.\t Enter email");
+          String address = sc.next()+ sc.nextLine();
+          System.out.println("3.\t Enter postcode");
+          int dob = sc.nextInt();
+          System.out.println("4.\t Enter phone number");
+          int phone = sc.nextInt();
+          System.out.println("Notify me - DISTANCE");
+          System.out.println("up to 20km");
+          System.out.println("up to 50km");
+          System.out.println("any distance");
+          String option = sc.next()+sc.nextLine();
+          System.out.println("Notify me - ROLES");
+          System.out.println("catering");
+          System.out.println("organising");
+          System.out.println("basic fitness required");
+          System.out.println("any role");
+          String role = sc.next()+sc.nextLine();
+          System.out.println("Choose to receive smartphone notifications about volunteer opportunities to suit your proximity and skills");
+          System.out.println("Submit");
+          
+  }
+  
+  public void currentIncidents()
+   {
+       System.out.println("CURRENT INCIDENTS");
+       System.out.println("Map or List");
+       String view = sc.next()+sc.nextLine();
+       System.out.println(" Disaster "+disaster1);
+       System.out.println(" Disaster "+disaster2);
+       System.out.println(" Disaster "+disaster3);
+       System.out.println(" Disaster "+disaster4);
+       System.out.println(" Disaster "+disaster5);
+       System.out.println(" Disaster "+disaster6);
+       System.out.println(" Disaster "+disaster7);
+       System.out.println(" Disaster "+disaster8);
+       System.out.println(" Disaster "+disaster9);
+       System.out.println(" Disaster "+disaster10);
+       System.out.println("Enter the disaster option number you would like to volunteer for");
+       disas_opt = sc.next()+ sc.nextLine();
+       disaster();
+    }
+}
