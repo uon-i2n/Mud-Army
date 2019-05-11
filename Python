@@ -1,0 +1,19 @@
+#Python Twilio 
+#Sends automatic text messages to all registered users using Twilio
+
+
+from twilio.rest import Client
+
+account_sid = 'AC8f901d0cba9a1cad1fd86d2e04e44c1e'
+auth_token = '2b020cc5eee8b0d51d8d9d9a5970d62a'
+client = Client(account_sid, auth_token)
+
+message = client.messages \
+                .create(
+                     body="The Pasha Bulker has stranded itself again! We need volunteers at the Newcastle University Hunter St. Campus! Type 'yes' to volunteer for the Mud Army",
+                     from_='+61488855281',
+                     to='+61404720700'
+                 )
+
+print(message.sid)
+
